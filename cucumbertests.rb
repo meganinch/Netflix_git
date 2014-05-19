@@ -6,6 +6,8 @@ And /^the file "([^\"]*)" exists$/ do |filename|
 File.exists?(File.join(@basedir, filename)).should be_true
 end
 
-And /^I visit the "([^\"]*)" page$/ do |urlname|
-	visit urlname
+Then /^I can see a map$/ do
+assert page.has_content? 'map_canvas'
 end
+
+
