@@ -1,0 +1,78 @@
+<html>
+<head>
+
+<script>
+
+    $(function() {
+
+   var people = [];
+
+   $.getJSON('netflix.json', function(data) 
+   {
+	 
+       $.each(data.data, function(i, f) 
+	   {
+		
+          var tblRow = "<tr>" + "<td>" + f[8] + "</td>" +
+           "<td>" + f[9] + "</td>" + "<td>" + f[10] + "</td>" + "<td>" + f[11] + "</td>" + "<td>" + f[12] + "</td>"  + "<td>" + f[13] + "</td>" + "<td>" + f[14] + "</td>" + "</tr>"
+           $(tblRow).appendTo("#userdata tbody");
+     });
+
+   });
+
+});
+
+</script>
+</head>
+
+<body>
+<br />
+<u1>
+ <li><a href="home.html">Home</a></li>
+ <li><a href="database.html">Database</a></li>
+ <li><a href="map.html">Map</a></li>
+ <li><a href="timeline.html">Timeline</a></li>
+ 
+ 
+ </u1> 
+<br />
+<br />
+<br />
+<h1> <center> <u>Netflix </u> </center></h1>
+<br />
+<form action="/search" method="post">
+<input name="key" type="input" />
+<input value="Search By Country" type="submit" />
+</form>
+
+
+
+<div class="background">
+ <div class="transbox">
+
+
+   <table id= "userdata" border="2">
+   
+  <thead>
+            <th>Id</th>
+            <th>Name</th>
+			<th>Streaming?</th>
+            <th>URL</th>
+            <th>Director</th>
+			<th>Country</th>
+			<th>Year</th>
+        </thead>
+      <tbody>
+		
+       </tbody>
+   </table>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+</body>
+</html>
