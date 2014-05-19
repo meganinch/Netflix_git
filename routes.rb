@@ -71,4 +71,6 @@ Netflix::Application.routes.draw do
  get 'map' => 'netflix#map';
  get 'show' => 'netflix#show';
  post 'search' => 'netflix#search'
+ get '/:locale' => 'dashboard#index'
+
 end
