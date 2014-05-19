@@ -2,10 +2,16 @@ Feature: Load the homepage
 	I want the page to display everything correctly
 	
 
-Scenario: See the title
+Scenario: See a map
 	Given I am in "app\views\netflix"
 	And the file "database.html.erb" exists
-	And I visit the "http:/127.0.0.1:3000/database.html" page
+	When I visit the "/map" page
+	Then I can see the map
+	
+	Scenario: Read form
+	Given I am in "app\views\netflix"
+	And I visit the "/contact" page	
+	Then I should see "Contact Us"
 	
 	
 	
