@@ -1,0 +1,31 @@
+<h1>Listing words</h1>
+
+<h3>Enter keyword</h3>
+<form action ="words/search" method="post">
+<input name = "key" type="input" />
+<input value="Search" type="submit"/>
+</form> 
+
+
+<table>
+  <tr>
+    <th>country</th>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @country.each do |country| %>
+<% if country.country.chars.first==@letter %>
+
+  <tr>
+    <td><%= country.country %></td>
+    <td><%= word.name %></td>
+    <td><%= link_to 'Search', country%></td>
+ 
+  </tr>
+ <% end %> 
+<% end %>
+</table>
+
+<br />

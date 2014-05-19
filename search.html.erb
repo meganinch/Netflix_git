@@ -1,0 +1,66 @@
+<html>
+<head>
+<title><center><u>Search results</center></u></title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+<script>
+
+    $(function() {
+
+   var people = [];
+
+   $.getJSON('netflix.json', function(data) 
+   {
+       $.each(data.data, function(i, f) 
+	   {
+	   var tblRow = "<tr>" + "<td>" + f[8] + "</td>" +
+           "<td>" + f[9] + "</td>" + "<td>" + f[10] + "</td>" + "<td>" + f[11] + "</td>" + "<td>" + f[12] + "</td>"  + "<td>" + f[13] + "</td>" + "<td>" + f[14] + "</td>" + "</tr>"
+			var country = "<%=@country%>" + "";
+			
+		   if(f[13].indexOf( country ) > -1)
+			{
+		   $(tblRow).appendTo("#userdata tbody");
+		   }
+		  
+     });
+	   });
+
+});
+
+
+</script>
+</head>
+<body>
+<br />
+<u1>
+ <li><a href="home.html">Home</a></li>
+ <li><a href="database.html">Database</a></li>
+ <li><a href="map.html">Map</a></li>
+ <li><a href="timeline.html">Timeline</a></li>
+  <br />
+ <br />
+ <br />
+<h1> <center> <u> Search Results </center> </u> </h1>
+
+<table id= "userdata" border="2">
+  <thead>
+		
+			<th>Id</th>
+            <th>Name</th>
+			<th>Streaming</th>
+            <th>URL</th>
+			<th>Director</th>
+            <th>Country</th>
+            <th>Year</th>
+			
+        </thead>
+      <tbody>
+		
+       </tbody>
+   </table>
+
+ <br />
+ <br />
+
+ 
+ </body>
+ </html>

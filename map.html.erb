@@ -1,0 +1,41 @@
+<html>
+<head>
+
+	
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc4qswXAX2nLT2_YptHxe2cWnAuc-pKYA&sensor=true"></script>
+		<script type="text/javascript">
+			function initialize() { 
+				var mapOptions = {
+					center: new google.maps.LatLng(2.8800, 23.6560), 
+					zoom: 8,
+				};
+				var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+			
+			
+		</script>
+		
+
+		
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+</head>
+<body>
+<br />
+<u1>
+ <li><a href="home.html">Home</a></li>
+ <li><a href="database.html">Database</a></li>
+ <li><a href="map.html">Map</a></li>
+ <li><a href="timeline.html">Timeline</a></li>
+  <br />
+ <br />
+ <br />
+<h1> <center> <u> Map </center> </u> </h1>
+
+ <br />
+ <br />
+
+ 
+<div id="map_canvas"></div>  
+</body>
+</html>
