@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		
+		<link rel="stylesheet" media="only screen and (max-width: 480px)" href="style.css" />
+	
+	</head>
+	
+	<body>
+	
+<u1>
+ <li><a href="home.html">Home</a></li>
+ <li><a href="database.html">Database</a></li>
+ <li><a href="map.html">Map</a></li>
+ <li><a href="about.html">About</a></li>
+ 
+ 
+ </u1> 
+		
+		<div class="container_8 main">
+			<div class="grid_8">
+				<div class="content1">
+ <br />
+ <br />
+   <br />
+ <br />
+ <div class="background1">
+ <div class="transbox1">
+		
+					<!-- app/views/users/login.html.erb -->
+					<br/><center><u><div class="header1">Log in</div> </u></center>
+<br />
+ <br />
+
+					<%= form_tag :action => 'process_login' %>
+					<center><p>
+					<%= label_tag :email %><br />
+					<%= text_field_tag :email, params[:email] %>
+					</p>
+					<p>
+					<%= label_tag :password %><br />
+					<%= password_field_tag :password %>
+					</p>
+
+					<%= submit_tag "log in"%></center>
+					<br/>
+					<center>
+					<%flash.each do |name,msg|%>
+						<%=content_tag :div,msg,:id=>"flash#{name}"%>
+					<%end%>
+					</center>
+					
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
