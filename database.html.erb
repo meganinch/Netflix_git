@@ -23,6 +23,30 @@
 });
 
 </script>
+
+<script>
+function loadXMLDoc()
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","ajax.txt",true);
+xmlhttp.send();
+}
+</script>
 </head>
 
 <body>
@@ -31,7 +55,7 @@
  <li><a href="home.html">Home</a></li>
  <li><a href="database.html">Database</a></li>
  <li><a href="map.html">Map</a></li>
- <li><a href="timeline.html">Timeline</a></li>
+ <li><a href="contact.html">Contact</a></li>
  
  
  </u1> 
@@ -66,13 +90,18 @@
 		
        </tbody>
    </table>
-
-</div>
-</div>
-</div>
-</div>
+   
 
 
+</div>
+</div>
+</div>
+</div>
+<br />
+<br />
+
+<div id="myDiv"></div>
+<center><button type="button" onclick="loadXMLDoc()">Click Me</button></center>
 
 </body>
 </html>
