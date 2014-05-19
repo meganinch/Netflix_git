@@ -70,5 +70,8 @@ Netflix::Application.routes.draw do
  get 'database' => 'netflix#database';
  get 'map' => 'netflix#map';
  get 'show' => 'netflix#show';
- post 'search' => 'netflix#search'
+ post 'search' => 'netflix#search';
+ get 'contact' => 'netflix#contact';
+
+ 
 end
