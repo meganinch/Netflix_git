@@ -14,7 +14,7 @@ Then /^I can see the map$/ do
   page.should have_content 'map'
  end
  
-Then /^I see the text$/ do 
-	assert page.has_content? 'contact us'
+Then /^I should see "([^\"]*)"$/ do |text|
+  page.should have_content text
 end
  

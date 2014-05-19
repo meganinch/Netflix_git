@@ -11,7 +11,7 @@ Scenario: See a map
 	Scenario: Read form
 	Given I am in "app\views\netflix"
 	And I visit the "/contact" page	
-	Then I see the text
+	Then I should see "Contact Us"
 	
 	
 	
